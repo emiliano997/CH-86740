@@ -1,7 +1,11 @@
 import java.util.Date;
 
 public class User {
+  public static final int LIMIT_USERS = 10;
+
   // Propiedades / Atributos
+  // Variables de instancia
+  private int id;
   private String username;
   private String password;
   private String email;
@@ -12,8 +16,11 @@ public class User {
 
   // Métodos / Acciones
   public void login(String username, String password) {
+
     if (this.username != username || this.password != password) {
       System.out.println("Login Failed");
+      String mensaje = "Invalid username or password";
+      System.out.println(mensaje);
       return;
     }
 
@@ -26,6 +33,19 @@ public class User {
   }
 
   // Setters y Getters
+  public int getId() {
+    return id;
+  }
+
+  public void setId(int id) {
+    if (id > LIMIT_USERS) {
+      System.out.println("User ID must be less than " + LIMIT_USERS);
+      return;
+    }
+
+    this.id = id;
+  }
+
   public String getUsername() {
     return username;
   }

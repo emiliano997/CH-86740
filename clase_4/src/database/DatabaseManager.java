@@ -1,15 +1,19 @@
 package database;
 
+import java.util.List;
+
 public class DatabaseManager {
+
+  private static final String DB_NAME = "coderhouse";
+
   String host;
   String port;
   String dbType;
   String username;
   String password;
-  String dbName;
 
   public void connect() {
-    System.out.println("Connected to database");
+    System.out.println("Connected to database " + DB_NAME);
   }
 
   public void disconnect() {
@@ -57,11 +61,4 @@ public class DatabaseManager {
     this.password = password;
   }
 
-  public String getDbName() {
-    return dbName;
-  }
-
-  public void setDbName(String dbName) {
-    this.dbName = dbName;
-  }
 }
