@@ -1,0 +1,4 @@
+2025-04-08 09:23:05.346299-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "ALUMNO" no encontrada
+Table "ALUMNO" not found; SQL statement:
+INSERT INTO ALUMNO (NOMBRE, APELLIDO, DNI, LEGAJO) VALUES ('Juan', 'Perez', 12345678, 87654321), ('Azucena', 'García', 23456789 ,98765432), ('Serafin' , 'Lopez', 34567890, 98765431) [42102-232]
